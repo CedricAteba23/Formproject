@@ -1,0 +1,20 @@
+<body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Sign up</h3>
+            <p>Inscrivez-vous!</p>
+          </div>
+        </div>
+        <form class="login-form" [formGroup]="loginform">
+          <input type="text" placeholder="Nom d'utilisateur"  formControlName="username"/>
+          <input type="text" placeholder="email" formControlName="email"/>
+          <input type="password" placeholder="mot de passe" formControlName="password"/>          
+          <input type="password" placeholder="confirmer le mot de passe" formControlName="password2"/>
+          <button (click)="register()">S'inscrire</button>
+          
+        </form>
+      </div>
+    </div>
+</body>

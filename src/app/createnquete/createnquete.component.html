@@ -1,0 +1,41 @@
+<html>
+  <body>
+      <br>
+      <br>
+      <br>
+        <h1 > Créer une Enquete</h1>
+      <!-- <div class="login-page">
+        <div class="form">
+          
+          
+          <form class="login-form" [formGroup]="loginform">
+            <input type="text" placeholder="Titre de l'enquete"  formControlName="titre"/>
+            <input type="text" placeholder="Type de l'enquete" formControlName="type"/>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Description"  formControlName="description"></textarea>
+            <input type="text" placeholder="enqueteur" formControlName="enqueteur"/>
+
+            <button class="btn btn-outline-success" routerLink="/enquete" (click)="saveEnquete()">Enregistrer une enquete</button>
+          </form>
+        </div>
+      </div> -->
+  <div [formGroup]="loginform">            
+   <form>
+    <div class="form-group" [formGroup]="loginform">
+    <label for="Name">titre</label>
+    <input type="name" class="form-control" id="Name" placeholder="Veuillez ajouter le titre" formControlName="titre">
+    </div>
+    <div class="form-group" [formGroup]="loginform">
+    <label for="Email1">Type</label>
+    <input type="email" class="form-control" id="Email1" placeholder="Veuillez ajouter le type" formControlName="type">
+    </div> 
+    
+    <div class="form-group" [formGroup]="loginform">
+    <label for=" Email1msg"></label>
+    <!-- add text area here -->
+    <textarea name="" id="" cols="60" rows="10" placeholder="Description"  formControlName="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-success" (click)="saveEnquete()">Sauvegarder</button>
+    </form>
+  </div>
+</body>
+</html>

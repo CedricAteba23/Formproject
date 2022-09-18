@@ -1,0 +1,155 @@
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/accueil">SURVEY</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/acceuil">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/createnquete">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                <button class="btn btn-outline-success" routerLink="/createnquete">Ajouter une enquete</button>
+
+              </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                <button class="btn btn-outline-warning" routerLink="/listform">Formulaires</button>
+                
+              </li>
+            </ul>
+            
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!-- <div>
+        <button routerLink="/editek"> Créer une Enquetes </button>
+    </div> -->
+
+    <br>
+    
+     <h1>Liste des enquetes</h1>
+     <!-- <table class="table table-striped">
+      <thead>
+         <tr border="1">
+            <th border="1">Titre enquete</th>
+            <th border="1">Type enquete</th> 
+            <th border="1">Description</th>
+            <th border="1">Status</th>
+            <th border="1">Date de création</th>
+            <th border="1">Enqueteur</th>
+         </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of enquetes" >
+            <td>{{item.titreEnq}}</td>
+            <td>{{item.typeEnq}}</td>
+            <td>{{item.descriptionEnq}}</td>
+            <td>{{item.actif}}</td>
+            <td>{{item.createdEnq}}</td>
+            <td>{{item.enqueteur}}</td>
+            <td>
+                <button type="button" class="btn btn-ligth mr-1">
+                    Modifier
+                </button>
+                <button type="button" class="btn btn-ligth mr-1">
+                    Supprimer
+                </button>
+                <button routerLink="/formulaire" type="button" class="btn btn-ligth mr-1">
+                    Formulaires
+                </button>
+            </td>
+        </tr>
+      </tbody>
+     </table> -->
+     <!-- <div class="row"  *ngFor="let item of enquetes">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{item.titreEnq}}</h5>
+              <p class="card-text">{{item.descriptionEnq}}</p>
+              <a href="#" class="btn btn-primary">Modifier</a>  
+              <a href="#" class="btn btn-danger">Supprimer</a>
+              <a href="#" class="btn btn-success">Formulaires</a>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+<!-- lignes ci-après à décommenter -->
+
+
+
+
+    <!-- <div class="card border-primary mb-3" style="max-width: 18rem; display: inline-block; justify-content: space-between;" *ngFor="let item of enquete">
+      
+        <div class="card-header">{{item.titre}}</div>
+        <div class="card-body text-primary">
+          <h5 class="card-title">{{item.type}}</h5>
+          <p class="card-text">{{item.description}}.</p>
+          <a href="#" class="btn btn-primary">Modifier</a>  
+          <a href="#" style="color:red ;" (click)="supp()">Supprimer</a>
+          <br>
+          <a href="/formulaire" style="color:green ;">Formulaires</a>
+        </div>
+    </div> -->
+
+    <!-- <div *ngFor="let c of enquete">
+      <li>{{c?.titre}}</li>
+      <li>{{c?.type}}</li>
+      <li>{{c?.description}}</li>
+    </div> -->
+
+<!-- 
+    <div class="card" *ngFor="let item of enquete">
+      <div class="card-body">
+        <h4 class="card-title">{{item?.titre}}</h4>
+        <p class="card-text">{{item?.description}}</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div> -->
+
+
+ 
+    
+
+          <div class="row"  *ngFor="let item of enquetes">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><strong>Titre:</strong>{{item.titre}}</h5>
+                  <p class="card-text">{{item.description}}</p>
+                  <p class="card-text"><strong>Enqueteur:</strong>{{item.enqueteur}}</p>
+                  <p class="card-text">Date de création:{{item.created}}</p>
+                  <a href="#" class="btn btn-primary">Modifier</a>  
+                  <button class="btn btn-danger">Supprimer</button>
+                  <button class="btn btn-outline-warning" routerLink="/formulaire/{{item.id}}" >Formulaires</button>
+                  <!-- <a href="#" class="btn btn-success" routerLink="/formulaire">Formulaires</a> -->
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+  
+
+
+</body>
+

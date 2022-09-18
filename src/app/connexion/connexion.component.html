@@ -1,0 +1,53 @@
+<head>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title style="font-family:Verdana, Geneva, Tahoma, sans-serif"> SURVEY</title>
+    </head>
+    <body>
+      <body>
+        <div class="login-page">
+          <div class="form">
+            <div class="login">
+              <div class="login-header">
+                <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">LOGIN</h3>
+                <p>Connectez-vous !</p>
+              </div>
+            </div>
+            <form class="login-form" [formGroup]="loginform">
+              <input id= "username" type="text" placeholder="Nom d'utilisateur" formControlName="username"/>
+              <input id= "email" type="text" placeholder="e-mail" formControlName="email"/>
+              <input id="password" type="password" placeholder="Mot de passe" formControlName="password"/>
+              
+              <button (click)="login()" >CONNEXION</button>
+              <!-- <p class="message">Mot de passe oublié?<a href="/mdp">Cliquez ici</a></p> -->
+              <p class="message">Mot de passe oublié?<a href="/">Cliquez ici</a></p>
+    
+              <br>
+              <p class="message">Pas encore de compte ?<a href="/inscription">Créer un compte</a></p>
+            </form>
+          </div>
+        </div>
+
+
+        <!-- <div class="text-center" >
+          <input class="form-control" type="file" 
+                  (change)="onChange($event)">
+        
+          <button (click)="onUpload()" 
+              class="btn btn-success">
+              Upload
+          </button>
+      </div>
+      <div class="container text-center jumbotron"
+    *ngIf="shortLink">
+    <h2> Visit Here</h2>
+    <a href="{{shortLink}}">{{shortLink}}</a>
+</div> -->
+  
+<!--Flag variable is used here-->
+<!-- <div class="container" *ngIf="loading">
+    <h3>Loading ...</h3>
+</div>
+    </body>
+     -->
+
+    <!-- [formGroup]="loginform" -->
